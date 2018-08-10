@@ -158,14 +158,14 @@ ul, li {
   border-top: 1px solid #444;
 }
 
-/*.controls h3 {
+.controls h3 {
   color: #f8f8f8;
   padding: .5rem 1rem;
   margin: 0;
   font-weight: 600;
 }
 
-button {
+/*button {
   outline: none;
   cursor: pointer;
   border: none;
