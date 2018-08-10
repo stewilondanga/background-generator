@@ -179,11 +179,11 @@ ul, li {
   display: table;
 }
 
-/*.row:after {
+.row:after {
   clear: both;
 }
 
-button {
+/*button {
   outline: none;
   cursor: pointer;
   border: none;
