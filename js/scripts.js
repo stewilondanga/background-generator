@@ -172,17 +172,17 @@ var navigate = (function() {
       bg.addColorStop(1,"#ddd");*/
       var inputs = document.getElementById("colour-div").getElementsByTagName('input');
       //console.log(inputs.length);
-      /*  for (var i = 0; i < inputs.length; i++) {
-      if (inputs.length > 1) {
-        bg.addColorStop(i / (inputs.length - 1), inputs[i].value);
-        console.log(inputs[i].value);
-      } else {
-        bg = inputs[i].value;
+      for (var i = 0; i < inputs.length; i++) {
+        if (inputs.length > 1) {
+          bg.addColorStop(i / (inputs.length - 1), inputs[i].value);
+          console.log(inputs[i].value);
+        } else {
+          bg = inputs[i].value;
+        }
+        colours[i] = inputs[i].value;
       }
-      colours[i] = inputs[i].value;
-    }
 
-    context.fillStyle = bg;
+      /*context.fillStyle = bg;
     context.beginPath();
     context.fillRect(0, 0, canvas.width, canvas.height);
     context.closePath();
