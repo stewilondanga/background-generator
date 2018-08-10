@@ -59,6 +59,12 @@ body {
   margin: 0 .25rem;
 }
 
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .topbar h1 {
   display: inline;
   font-size: 2rem;
@@ -69,11 +75,7 @@ body {
   padding-left: 1rem;
 }
 
-/*ul, li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+/*
 
 button {
   outline: none;
