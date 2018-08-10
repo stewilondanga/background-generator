@@ -59,9 +59,9 @@ body {
   margin: 0 .25rem;
 }
 
-/*.topbar h1 {
+.topbar h1 {
   display: inline;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #f8f8f8;
   margin: 0;
@@ -69,7 +69,7 @@ body {
   padding-left: 1rem;
 }
 
-ul, li {
+/*ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
