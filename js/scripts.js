@@ -188,26 +188,26 @@ var navigate = (function() {
       context.closePath();
       context.fill();
 
-      /*context.beginPath();
-    var bg2 = context.createLinearGradient(0, 0, 0, cvs.height);
-    bg2.addColorStop(0, "#fff");
-    bg2.addColorStop(1, "#ccc");
-    context.fillStyle = bg2;
-    context.fillRect(0, 0, cvs.width, cvs.height);
-    context.closePath();
-    context.fill();
-    context.globalCompositeOperation = "source-over";
-    //ctx.drawImage(base_image, 0, 0);
-    if (context == ctx2) {
-      imgd = context;
-    } else if (imgd.getImageData(0, 0, 1, 1).data[3] < 255 || imgd.getImageData(canvas.width - 1, canvas.height - 1, 1, 1).data[3] < 255) {
-      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.beginPath();
+      var bg2 = context.createLinearGradient(0, 0, 0, cvs.height);
+      bg2.addColorStop(0, "#fff");
+      bg2.addColorStop(1, "#ccc");
+      context.fillStyle = bg2;
+      context.fillRect(0, 0, cvs.width, cvs.height);
+      context.closePath();
+      context.fill();
+      context.globalCompositeOperation = "source-over";
+      //ctx.drawImage(base_image, 0, 0);
+      if (context == ctx2) {
+        imgd = context;
+      } else if (imgd.getImageData(0, 0, 1, 1).data[3] < 255 || imgd.getImageData(canvas.width - 1, canvas.height - 1, 1, 1).data[3] < 255) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+
     }
 
-
-  }
-
-  function saveImage() {
+    /*function saveImage() {
     // body...
     var dataURL = canvas.toDataURL();
     saveBtn.href = dataURL;
