@@ -312,7 +312,7 @@ button:hover, .button:hover {
   }
 }
 
-/*@keyframes a4 {
+@keyframes a4 {
   0% {
     transform: translateX(0);
   }
@@ -336,7 +336,7 @@ button:hover, .button:hover {
   }
 }
 
-.containers {
+/*.containers {
   width: 520px;
   margin: 20px auto;
 }
