@@ -246,119 +246,119 @@ var navigate = (function() {
         }
       }
 
-      /*        for (var i = 0; i < points.length; i++) {
-                if (obj == points[i] && obj.r % 2 == 0 && points[i + maxCols + 1] && obj.c < maxCols - 1) {
-                  //setColour(obj.x,obj.y+2*cellSize/3);
-                  setColour(Math.round(obj.c / maxCols * gridWidth), Math.round(obj.r / maxRows * gridHeight + 2 * cellSize / 3));
-                  filler();
-                  //console.log(obj.c);
-                  ctx.beginPath();
-                  ctx.moveTo(obj.x, obj.y);
-                  ctx.lineTo(points[i + maxCols].x, points[i + maxCols].y);
-                  ctx.lineTo(points[i + maxCols + 1].x, points[i + maxCols + 1].y);
-                  ctx.closePath();
-                  ctx.fill();
-                  //ctx.stroke();
+      for (var i = 0; i < points.length; i++) {
+        if (obj == points[i] && obj.r % 2 == 0 && points[i + maxCols + 1] && obj.c < maxCols - 1) {
+          //setColour(obj.x,obj.y+2*cellSize/3);
+          setColour(Math.round(obj.c / maxCols * gridWidth), Math.round(obj.r / maxRows * gridHeight + 2 * cellSize / 3));
+          filler();
+          //console.log(obj.c);
+          ctx.beginPath();
+          ctx.moveTo(obj.x, obj.y);
+          ctx.lineTo(points[i + maxCols].x, points[i + maxCols].y);
+          ctx.lineTo(points[i + maxCols + 1].x, points[i + maxCols + 1].y);
+          ctx.closePath();
+          ctx.fill();
+          //ctx.stroke();
 
-                  //setColour(obj.x+cellSize/2,obj.y+cellSize/3);
-                  setColour(Math.round(obj.c / maxCols * gridWidth + cellSize / 2), Math.round(obj.r / maxRows * gridHeight + cellSize / 3));
-                  filler();
-                  //ctx.fillStyle = "green";
-                  ctx.beginPath();
-                  ctx.moveTo(obj.x, obj.y);
-                  ctx.lineTo(points[i + 1].x, points[i + 1].y);
-                  ctx.lineTo(points[i + maxCols + 1].x, points[i + maxCols + 1].y);
-                  ctx.closePath();
-                  ctx.fill();
-                  //console.log("YES");
-                }
-                if (obj == points[i] && obj.r % 2 != 0 && points[i + maxCols + 1] && obj.c > 0) {
+          //setColour(obj.x+cellSize/2,obj.y+cellSize/3);
+          /*              setColour(Math.round(obj.c / maxCols * gridWidth + cellSize / 2), Math.round(obj.r / maxRows * gridHeight + cellSize / 3));
+                        filler();
+                        //ctx.fillStyle = "green";
+                        ctx.beginPath();
+                        ctx.moveTo(obj.x, obj.y);
+                        ctx.lineTo(points[i + 1].x, points[i + 1].y);
+                        ctx.lineTo(points[i + maxCols + 1].x, points[i + maxCols + 1].y);
+                        ctx.closePath();
+                        ctx.fill();
+                        //console.log("YES");
+                      }
+                      if (obj == points[i] && obj.r % 2 != 0 && points[i + maxCols + 1] && obj.c > 0) {
 
-                  //setColour(obj.x-cellSize/2,obj.y+cellSize/3);
-                  setColour(Math.round((obj.c - 1) / maxCols * gridWidth), Math.round(obj.r / maxRows * gridHeight + cellSize / 3));
-                  //if (!setColour(Math.round((obj.c-1)/maxCols*gridWidth),200)) {console.log(obj)}
-                  filler();
-                  ctx.beginPath();
-                  ctx.moveTo(obj.x, obj.y);
-                  ctx.lineTo(points[i - 1].x, points[i - 1].y);
-                  ctx.lineTo(points[i + maxCols - 1].x, points[i + maxCols - 1].y);
-                  ctx.closePath();
-                  ctx.fill();
-                  //ctx.stroke();
+                        //setColour(obj.x-cellSize/2,obj.y+cellSize/3);
+                        setColour(Math.round((obj.c - 1) / maxCols * gridWidth), Math.round(obj.r / maxRows * gridHeight + cellSize / 3));
+                        //if (!setColour(Math.round((obj.c-1)/maxCols*gridWidth),200)) {console.log(obj)}
+                        filler();
+                        ctx.beginPath();
+                        ctx.moveTo(obj.x, obj.y);
+                        ctx.lineTo(points[i - 1].x, points[i - 1].y);
+                        ctx.lineTo(points[i + maxCols - 1].x, points[i + maxCols - 1].y);
+                        ctx.closePath();
+                        ctx.fill();
+                        //ctx.stroke();
 
-                  //setColour(obj.x,obj.y+2*cellSize/3);
-                  setColour(Math.round((obj.c - 1) / maxCols * gridWidth + cellSize / 2), Math.round(obj.r / maxRows * gridHeight + 2 * cellSize / 3));
-                  filler();
-                  //ctx.fillStyle = "green";
-                  ctx.beginPath();
-                  ctx.moveTo(obj.x, obj.y);
-                  ctx.lineTo(points[i + maxCols - 1].x, points[i + maxCols - 1].y);
-                  ctx.lineTo(points[i + maxCols].x, points[i + maxCols].y);
-                  ctx.closePath();
-                  ctx.fill();
-                  //console.log("NO");
-                }
-              }
-            }
-            //Point generator
-            function generatePoints(amount) {
-              points = [];
-              var temp;
-              var row = 0;
-              var col = 0;
-              for (var i = 0; i < amount; i++) {
-                temp = new point();
-                if (row % 2 == 0) {
-                  temp.x = (col * cellSize) - cellSize;
-                  temp.x = temp.x + (Math.random() - .5) * variance * cellSize * 2;
-                } else {
-                  temp.x = (col * cellSize) - cellSize - cellSize / 2;
-                  temp.x = temp.x + (Math.random() - .5) * variance * cellSize * 2;
-                }
-                temp.y = (row * cellSize * 0.866) - cellSize;
-                temp.y = temp.y + (Math.random() - .5) * variance * cellSize * 2;
-                temp.r = row;
-                temp.c = col;
-                points.push(temp);
-                col = col + 1;
-                if ((i + 1) % maxCols == 0) {
-                  row = row + 1;
-                  col = 0;
-                }
-              }
-              //console.log(points);
-            }
+                        //setColour(obj.x,obj.y+2*cellSize/3);
+                        setColour(Math.round((obj.c - 1) / maxCols * gridWidth + cellSize / 2), Math.round(obj.r / maxRows * gridHeight + 2 * cellSize / 3));
+                        filler();
+                        //ctx.fillStyle = "green";
+                        ctx.beginPath();
+                        ctx.moveTo(obj.x, obj.y);
+                        ctx.lineTo(points[i + maxCols - 1].x, points[i + maxCols - 1].y);
+                        ctx.lineTo(points[i + maxCols].x, points[i + maxCols].y);
+                        ctx.closePath();
+                        ctx.fill();
+                        //console.log("NO");
+                      }
+                    }
+                  }
+                  //Point generator
+                  function generatePoints(amount) {
+                    points = [];
+                    var temp;
+                    var row = 0;
+                    var col = 0;
+                    for (var i = 0; i < amount; i++) {
+                      temp = new point();
+                      if (row % 2 == 0) {
+                        temp.x = (col * cellSize) - cellSize;
+                        temp.x = temp.x + (Math.random() - .5) * variance * cellSize * 2;
+                      } else {
+                        temp.x = (col * cellSize) - cellSize - cellSize / 2;
+                        temp.x = temp.x + (Math.random() - .5) * variance * cellSize * 2;
+                      }
+                      temp.y = (row * cellSize * 0.866) - cellSize;
+                      temp.y = temp.y + (Math.random() - .5) * variance * cellSize * 2;
+                      temp.r = row;
+                      temp.c = col;
+                      points.push(temp);
+                      col = col + 1;
+                      if ((i + 1) % maxCols == 0) {
+                        row = row + 1;
+                        col = 0;
+                      }
+                    }
+                    //console.log(points);
+                  }
 
-            function addRand(a, b) {
-              return (Math.random() * b * a - (b / 2))
-            }
+                  function addRand(a, b) {
+                    return (Math.random() * b * a - (b / 2))
+                  }
 
-            function pointFun(drawOnly) {
-              if (drawOnly === true) {
-                //do nothing
-              } else {
-                cellSize = (cRange.value * 3) + 30;
-                variance = vRange.value / 100;
-                gridWidth = cvs.width + cellSize * 2;
-                gridHeight = cvs.height + cellSize * 2;
-                maxCols = Math.ceil(gridWidth / cellSize) + 2;
-                maxRows = Math.ceil(gridHeight / (cellSize * 0.865))
-                //console.log(maxCols);
-                var x = maxCols;
-                var y = maxRows;
-                generatePoints(x * y);
-              }
-              ovA = oAmount.value / 100;
-              ctx.clearRect(0, 0, cvs.width, cvs.height);
-              drawBG(ctx, cvs);
-              for (var i = 0; i < points.length; i++) {
-                draw(points[i], true);
-              };
-              saveImage();
-              loader.style.display = "none";
-            }
+                  function pointFun(drawOnly) {
+                    if (drawOnly === true) {
+                      //do nothing
+                    } else {
+                      cellSize = (cRange.value * 3) + 30;
+                      variance = vRange.value / 100;
+                      gridWidth = cvs.width + cellSize * 2;
+                      gridHeight = cvs.height + cellSize * 2;
+                      maxCols = Math.ceil(gridWidth / cellSize) + 2;
+                      maxRows = Math.ceil(gridHeight / (cellSize * 0.865))
+                      //console.log(maxCols);
+                      var x = maxCols;
+                      var y = maxRows;
+                      generatePoints(x * y);
+                    }
+                    ovA = oAmount.value / 100;
+                    ctx.clearRect(0, 0, cvs.width, cvs.height);
+                    drawBG(ctx, cvs);
+                    for (var i = 0; i < points.length; i++) {
+                      draw(points[i], true);
+                    };
+                    saveImage();
+                    loader.style.display = "none";
+                  }
 
-            //Execute when DOM has loaded
-            document.addEventListener('DOMContentLoaded', init, false);
+                  //Execute when DOM has loaded
+                  document.addEventListener('DOMContentLoaded', init, false);
 
-          })();
+                })();
