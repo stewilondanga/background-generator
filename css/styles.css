@@ -227,11 +227,11 @@ button, .button {
   width: 100%;
 }
 
-/*button:hover, .button:hover {
+button:hover, .button:hover {
   background: linear-gradient(to bottom right, #e16b7b, #af3580);
 }
 
-a {
+/*a {
   color: #5ad;
   text-decoration: none;
 }
