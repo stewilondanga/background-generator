@@ -95,7 +95,21 @@ ul, li {
   text-align: center;
 }
 
+.loader {
+  position: absolute;
+  top: 50%;
+}
+
 /*
+
+.loader {
+  position: absolute;
+  filter: url("#goo");
+  top: calc(50% - 15px);
+  left: calc(50% - 45px);
+  height: 30px;
+  width: 90px;
+}
 
 button {
   outline: none;
@@ -210,20 +224,6 @@ label {
   width: 100%;
   font-size: .9em;
   text-align: center;
-}
-
-.loader {
-  position: absolute;
-  top: 50%;
-}
-
-.loader {
-  position: absolute;
-  filter: url("#goo");
-  top: calc(50% - 15px);
-  left: calc(50% - 45px);
-  height: 30px;
-  width: 90px;
 }
 
 .circle {
