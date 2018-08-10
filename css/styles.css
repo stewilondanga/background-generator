@@ -130,11 +130,11 @@ ul, li {
   animation: a3 1200ms ease-out infinite;
 }
 
-/*.circle:nth-child(3) {
+.circle:nth-child(3) {
   animation: a4 1200ms ease-out infinite;
 }
 
-button {
+/*button {
   outline: none;
   cursor: pointer;
   border: none;
