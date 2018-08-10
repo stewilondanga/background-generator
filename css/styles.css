@@ -170,7 +170,20 @@ ul, li {
   background: #222;
 }
 
-/*button {
+.row {
+  margin: 0 -0.5rem;
+}
+
+/*.row:before, .row:after {
+  content: '';
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+button {
   outline: none;
   cursor: pointer;
   border: none;
@@ -182,19 +195,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.row {
-  margin: 0 -0.5rem;
-}
-
-.row:before, .row:after {
-  content: '';
-  display: table;
-}
-
-.row:after {
-  clear: both;
 }
 
 ._50 {
