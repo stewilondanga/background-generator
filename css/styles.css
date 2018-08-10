@@ -49,13 +49,11 @@ body {
   background: #F8CEAA;
 }
 
-/*
-
 .topbar li {
   display: inline;
 }
 
-.topbar li:not(:last-child)::after {
+/*.topbar li:not(:last-child)::after {
   content: " •";
   color: #666;
   margin: 0 .25rem;
