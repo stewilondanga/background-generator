@@ -46,9 +46,9 @@ var navigate = (function() {
     ctx2 = cvs2.getContext("2d");
     numColours = document.getElementById("numColours");
 
-    /*  preset = document.getElementById("preset-size");
+    preset = document.getElementById("preset-size");
 
-      preset.addEventListener("change", function() {
+    /*  preset.addEventListener("change", function() {
         var temp5 = preset.value.split("-");
         console.log(temp5);
 
