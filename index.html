@@ -10,48 +10,47 @@
 <body>
 
   <div class="my_social">
-      <a href="https://www.linkedin.com/in/stewart-ilondanga-336b2743/" class="social">
+    <a href="https://www.linkedin.com/in/stewart-ilondanga-336b2743/" class="social">
           <img src="https://i.imgsafe.org/85/857cb1a42e.png" alt="linkedin"></img>
         </a>
-      <a href="https://stewilondanga.github.io/" class="social">
+    <a href="https://stewilondanga.github.io/" class="social">
           <img src="https://i.imgsafe.org/8d/8d745a5c82.png" alt="github"></img>
         </a>
-      <a href="https://twitter.com/stew_ilondanga" class="social">
+    <a href="https://twitter.com/stew_ilondanga" class="social">
           <img src="https://i.imgsafe.org/43/431dd07874.png" alt="twitter"></img>
         </a>
-    </div>
+  </div>
 
-    <!-- Topbar -->
-    <header class="topbar">
-    	<ul>
-    		<li><h1>Low Poly Background</h1></li>
-        <li><a href="https://cojdev.github.io/lowpoly" target="_top">Full Version</a></li>
-    		<li><a class="github-button" href="https://github.com/cojdev/lowpoly" data-icon="octicon-star" data-show-count="true" aria-label="Star cojdev/lowpoly on GitHub">Star</a></li>
-    	</ul>
-    </header>
-    <!-- Canvas Display -->
-    <section class="display">
-    	<div class="wrap">
-    		<div id="loader" class="loader">
-    			<div class="circle"></div>
-    			<div class="circle"></div>
-    			<div class="circle"></div>
-    			<div class="circle"></div>
-    		</div>
-    	<canvas id="canvas" class="canvas1"></canvas>
-    	</div>
-    	<canvas id="canvas2" class="canvas2"></canvas>
-      <div class="footer">
-        Developed by <a href="https://cojdev.github.io" target="_top">Charles Ojukwu</a>
+  <!-- Topbar -->
+  <header class="topbar">
+    <ul>
+      <li>
+        <h1>Low Poly Background</h1></li>
+      <li><a href="https://cojdev.github.io/lowpoly" target="_top">Full Version</a></li>
+      <li><a class="github-button" href="https://github.com/cojdev/lowpoly" data-icon="octicon-star" data-show-count="true" aria-label="Star cojdev/lowpoly on GitHub">Star</a></li>
+    </ul>
+  </header>
+  <!-- Canvas Display -->
+  <section class="display">
+    <div class="wrap">
+      <div id="loader" class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
       </div>
-    </section>
-    <!-- Controls -->
-    <section class="controls">
+      <canvas id="canvas" class="canvas1"></canvas>
+    </div>
+    <canvas id="canvas2" class="canvas2"></canvas>
 
-    	<h3>Dimensions</h3>
-    	<div class="fieldgroup">
-    		<label for="preset-size">Presets</label>
-    		<select id="preset-size">
+  </section>
+  <!-- Controls -->
+  <section class="controls">
+
+    <h3>Dimensions</h3>
+    <div class="fieldgroup">
+      <label for="preset-size">Presets</label>
+      <select id="preset-size">
     			<option value="1280-720">1280x720</option>
     			<option value="1366-768">1366x768</option>
     			<option value="1920-1080">1920x1080</option>
@@ -60,46 +59,46 @@
     			<option value="750-1334">iPhone 6/7/8</option>
     			<option value="1080-1920">iPhone 6+/7+/8+</option>
     		</select>
-    		<div class="row">
-    			<div class="_50">
-    				<label for="width">Width</label>
-    				<input type="number" id="width">
-    			</div>
-    			<div class="_50">
-    				<label for="height">Height</label>
-    				<input type="number" id="height">
-    			</div>
-    		</div>
-    		<button id="size-btn">Set</button>
-    	</div>
+      <div class="row">
+        <div class="_50">
+          <label for="width">Width</label>
+          <input type="number" id="width">
+        </div>
+        <div class="_50">
+          <label for="height">Height</label>
+          <input type="number" id="height">
+        </div>
+      </div>
+      <button id="size-btn">Set</button>
+    </div>
 
-    	<h3>Geometry</h3>
-    	<div class="fieldgroup">
-    		<label for="variance">Variance</label>
-    		<input type="range" id="variance" value="40">
+    <h3>Geometry</h3>
+    <div class="fieldgroup">
+      <label for="variance">Variance</label>
+      <input type="range" id="variance" value="40">
 
-    		<label for="cell-size">Cell Size</label>
-    		<input type="range" id="cell-size" value="40">
+      <label for="cell-size">Cell Size</label>
+      <input type="range" id="cell-size" value="40">
 
-    		<label for="oamount">Depth</label>
-    		<input type="range" id="oamount" value="10">
-    	</div>
+      <label for="oamount">Depth</label>
+      <input type="range" id="oamount" value="10">
+    </div>
 
 
-    	<h3>Colour</h3>
-    	<div class="fieldgroup">
-    		<label for="numColours">No. of colours: <span id="num-colours"></span></label>
-    		<input type="range" id="numColours" value="2" max="4" min="1" step="1"><br>
-    		<!-- Container for dynamically generated color input elememets -->
-    		<div id="colour-div"></div>
-    	</div>
-    	<div class="section">
-    		<a id="save" class="button" download="lowpoly.png">Download Image</a>
-    	</div>
+    <h3>Colour</h3>
+    <div class="fieldgroup">
+      <label for="numColours">No. of colours: <span id="num-colours"></span></label>
+      <input type="range" id="numColours" value="2" max="4" min="1" step="1"><br>
+      <!-- Container for dynamically generated color input elememets -->
+      <div id="colour-div"></div>
+    </div>
+    <div class="section">
+      <a id="save" class="button" download="lowpoly.png">Download Image</a>
+    </div>
 
-    </section>
-    <!-- Loader -->
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  </section>
+  <!-- Loader -->
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
     	<defs>
     	<filter id="goo">
     		<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
