@@ -18,17 +18,14 @@ body {
   font-family: courier;
 }
 
-/*ul, li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+@charset "UTF-8";
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-button {
-  outline: none;
-  cursor: pointer;
-  border: none;
-}
+/*
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -51,13 +48,17 @@ button {
   height: 1.5em;
 }
 
-@charset "UTF-8";
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
 a {
   color: #5ad;
   text-decoration: none;
