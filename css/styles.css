@@ -193,6 +193,10 @@ ul, li {
   width: 50%;
 }
 
+label {
+  display: block;
+}
+
 input[type=text], input[type=number], input[type=range], select {
   display: block;
   width: 100%;
@@ -234,10 +238,6 @@ button, .button {
 
 button:hover, .button:hover {
   background: linear-gradient(to bottom right, #e16b7b, #af3580);
-}
-
-label {
-  display: block;
 }
 
 .footer {
