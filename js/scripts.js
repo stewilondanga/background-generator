@@ -9,44 +9,44 @@ var navigate = (function() {
 
 (function() {
 
-    'use strict';
+  'use strict';
 
-    var cvs, //canvas
-      ctx, //canvas context
-      gridWidth, //draw width (2 cells wider than the actual canvas)
-      gridHeight, //draw height (2 cells taller than the actual canvas)
-      vRange,
-      cRange,
-      maxCols,
-      maxRows,
-      oAmount,
-      imgd, imge,
-      base_image,
-      saveBtn,
-      cvs2,
-      ctx2,
-      loader,
-      numColours,
-      preset;
-    var points = [];
-    var cellSize = 50; //size of a single grid square
-    var variance = 0.2;
-    var ovA = 0.5;
-    var colours = ["#22bbee", "#8855cc", "#ee2266", "#ee7722"];
+  var cvs, //canvas
+    ctx, //canvas context
+    gridWidth, //draw width (2 cells wider than the actual canvas)
+    gridHeight, //draw height (2 cells taller than the actual canvas)
+    vRange,
+    cRange,
+    maxCols,
+    maxRows,
+    oAmount,
+    imgd, imge,
+    base_image,
+    saveBtn,
+    cvs2,
+    ctx2,
+    loader,
+    numColours,
+    preset;
+  var points = [];
+  var cellSize = 50; //size of a single grid square
+  var variance = 0.2;
+  var ovA = 0.5;
+  var colours = ["#22bbee", "#8855cc", "#ee2266", "#ee7722"];
 
-    /*function init() {
-      //Add on load scripts
-      cvs = document.getElementById("canvas");
-      cRange = document.getElementById("cell-size");
-      vRange = document.getElementById("variance");
-      oAmount = document.getElementById("oamount");
-      saveBtn = document.getElementById('save');
-      ctx = cvs.getContext("2d");
-      cvs2 = document.getElementById("canvas2");
-      ctx2 = cvs2.getContext("2d");
-      numColours = document.getElementById("numColours");
+  function init() {
+    //Add on load scripts
+    cvs = document.getElementById("canvas");
+    cRange = document.getElementById("cell-size");
+    vRange = document.getElementById("variance");
+    oAmount = document.getElementById("oamount");
+    saveBtn = document.getElementById('save');
+    ctx = cvs.getContext("2d");
+    cvs2 = document.getElementById("canvas2");
+    ctx2 = cvs2.getContext("2d");
+    numColours = document.getElementById("numColours");
 
-      preset = document.getElementById("preset-size");
+    /*  preset = document.getElementById("preset-size");
 
       preset.addEventListener("change", function() {
         var temp5 = preset.value.split("-");
