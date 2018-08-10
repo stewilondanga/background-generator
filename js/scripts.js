@@ -11,7 +11,7 @@ var navigate = (function() {
 
     'use strict';
 
-    /*var cvs, //canvas
+    var cvs, //canvas
       ctx, //canvas context
       gridWidth, //draw width (2 cells wider than the actual canvas)
       gridHeight, //draw height (2 cells taller than the actual canvas)
@@ -34,7 +34,7 @@ var navigate = (function() {
     var ovA = 0.5;
     var colours = ["#22bbee", "#8855cc", "#ee2266", "#ee7722"];
 
-    function init() {
+    /*function init() {
       //Add on load scripts
       cvs = document.getElementById("canvas");
       cRange = document.getElementById("cell-size");
