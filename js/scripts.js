@@ -182,13 +182,13 @@ var navigate = (function() {
         colours[i] = inputs[i].value;
       }
 
-      /*context.fillStyle = bg;
-    context.beginPath();
-    context.fillRect(0, 0, canvas.width, canvas.height);
-    context.closePath();
-    context.fill();
+      context.fillStyle = bg;
+      context.beginPath();
+      context.fillRect(0, 0, canvas.width, canvas.height);
+      context.closePath();
+      context.fill();
 
-    context.beginPath();
+      /*context.beginPath();
     var bg2 = context.createLinearGradient(0, 0, 0, cvs.height);
     bg2.addColorStop(0, "#fff");
     bg2.addColorStop(1, "#ccc");
