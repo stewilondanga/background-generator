@@ -61,10 +61,10 @@ var navigate = (function() {
         cvs.width = w;
         cvs.height = h;
 
-        /*    gridWidth = cvs.width + cellSize * 2;
-            gridHeight = cvs.height + cellSize * 2;
+        gridWidth = cvs.width + cellSize * 2;
+        gridHeight = cvs.height + cellSize * 2;
 
-            cvs2.width = cvs.width;
+        /*    cvs2.width = cvs.width;
             cvs2.height = cvs.height;
             //Repopulate inputs
             document.getElementById('width').value = w;
