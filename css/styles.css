@@ -198,7 +198,7 @@ input[type=text], input[type=number], input[type=range], select {
   width: 100%;
 }
 
-/*input[type=text], input[type=number], select {
+input[type=text], input[type=number], select {
   height: 2rem;
   line-height: 2rem;
   padding: 0 .5rem;
@@ -207,7 +207,7 @@ input[type=text], input[type=number], input[type=range], select {
   margin-bottom: .75rem;
 }
 
-
+/*
 button {
   outline: none;
   cursor: pointer;
