@@ -75,6 +75,10 @@ ul, li {
   padding-left: 1rem;
 }
 
+.section {
+  padding: 1rem;
+}
+
 .display {
   width: calc(100% - 200px);
   text-align: center;
@@ -144,10 +148,6 @@ ul, li {
   display: none;
 }
 
-.section {
-  padding: 1rem;
-}
-
 .controls {
   position: fixed;
   top: 40px;
@@ -193,7 +193,22 @@ ul, li {
   width: 50%;
 }
 
-/*button {
+input[type=text], input[type=number], input[type=range], select {
+  display: block;
+  width: 100%;
+}
+
+/*input[type=text], input[type=number], select {
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 .5rem;
+  background: #fff;
+  border: none;
+  margin-bottom: .75rem;
+}
+
+
+button {
   outline: none;
   cursor: pointer;
   border: none;
@@ -219,20 +234,6 @@ button, .button {
 
 button:hover, .button:hover {
   background: linear-gradient(to bottom right, #e16b7b, #af3580);
-}
-
-input[type=text], input[type=number], input[type=range], select {
-  display: block;
-  width: 100%;
-}
-
-input[type=text], input[type=number], select {
-  height: 2rem;
-  line-height: 2rem;
-  padding: 0 .5rem;
-  background: #fff;
-  border: none;
-  margin-bottom: .75rem;
 }
 
 label {
