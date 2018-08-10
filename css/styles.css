@@ -53,13 +53,13 @@ body {
   display: inline;
 }
 
-/*.topbar li:not(:last-child)::after {
+.topbar li:not(:last-child)::after {
   content: " •";
   color: #666;
   margin: 0 .25rem;
 }
 
-.topbar h1 {
+/*.topbar h1 {
   display: inline;
   font-size: 1rem;
   font-weight: 400;
