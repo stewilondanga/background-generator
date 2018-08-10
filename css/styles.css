@@ -85,6 +85,16 @@ ul, li {
   bottom: 0;
 }
 
+.wrap {
+  position: relative;
+  display: inline-block;
+  height: calc(100vh - 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 /*
 
 button {
@@ -119,16 +129,6 @@ a:hover {
   float: left;
   padding: 0 0.5rem;
   width: 50%;
-}
-
-.wrap {
-  position: relative;
-  display: inline-block;
-  height: calc(100vh - 40px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .canvas1 {
