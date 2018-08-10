@@ -145,34 +145,34 @@ var navigate = (function() {
       //saveBtn.addEventListener("click",saveImage,false);
     }
     //Particle constructor
-    /*      function point() {
-            /*this.x = Math.random()*cvs.width;;
-            this.y = Math.random()*cvs.height;
-            this.vx = (Math.random()*2)-1;
-            this.vy = (Math.random()*2)-1;*/
-    //points.push(this);
-  }
+    function point() {
+      /*this.x = Math.random()*cvs.width;;
+      this.y = Math.random()*cvs.height;
+      this.vx = (Math.random()*2)-1;
+      this.vy = (Math.random()*2)-1;*/
+      //points.push(this);
+    }
 
-  function drawBG(context, canvas) {
-    context.clearRect(0, 0, cvs.width, cvs.height);
-    context.globalCompositeOperation = "multiply";
-    var bg = context.createLinearGradient(0, 0, canvas.width, 0);
+    function drawBG(context, canvas) {
+      context.clearRect(0, 0, cvs.width, cvs.height);
+      context.globalCompositeOperation = "multiply";
+      var bg = context.createLinearGradient(0, 0, canvas.width, 0);
 
-    //Duskish gradient
-    /*bg.addColorStop(0,"#0e1b32");
-    bg.addColorStop(0.8,"#c28993");
-    bg.addColorStop(1,"#ffc7af");*/
+      //Duskish gradient
+      /*bg.addColorStop(0,"#0e1b32");
+      bg.addColorStop(0.8,"#c28993");
+      bg.addColorStop(1,"#ffc7af");*/
 
-    //Pink/Purple Gradient
-    /*bg.addColorStop(0,"#85c");
-    bg.addColorStop(1,"#d14");*/
+      //Pink/Purple Gradient
+      /*bg.addColorStop(0,"#85c");
+      bg.addColorStop(1,"#d14");*/
 
-    //Whitish
-    /*bg.addColorStop(0,"#f8f8f8");
-    bg.addColorStop(1,"#ddd");*/
-    var inputs = document.getElementById("colour-div").getElementsByTagName('input');
-    //console.log(inputs.length);
-    for (var i = 0; i < inputs.length; i++) {
+      //Whitish
+      /*bg.addColorStop(0,"#f8f8f8");
+      bg.addColorStop(1,"#ddd");*/
+      var inputs = document.getElementById("colour-div").getElementsByTagName('input');
+      //console.log(inputs.length);
+      /*  for (var i = 0; i < inputs.length; i++) {
       if (inputs.length > 1) {
         bg.addColorStop(i / (inputs.length - 1), inputs[i].value);
         console.log(inputs[i].value);
