@@ -44,30 +44,12 @@ body {
   height: 1.5em;
 }
 
-/*ul, li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  outline: none;
-  cursor: pointer;
-  border: none;
-}
-a {
-  color: #5ad;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .topbar {
   height: 40px;
-  background: #333;
+  background: #F8CEAA;
 }
+
+/*
 
 .topbar li {
   display: inline;
@@ -87,6 +69,26 @@ a:hover {
   margin: 0;
   line-height: 40px;
   padding-left: 1rem;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+a {
+  color: #5ad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .display {
