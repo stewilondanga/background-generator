@@ -240,16 +240,7 @@ button:hover, .button:hover {
   text-align: center;
 }
 
-/*a {
-  color: #5ad;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-@keyframes a1 {
+/*@keyframes a1 {
   0% {
     transform: translateX(0);
   }
