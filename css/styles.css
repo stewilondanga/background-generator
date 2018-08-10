@@ -118,11 +118,11 @@ ul, li {
   left: 30px;
 }
 
-/*.circle:first-child {
+.circle:first-child {
   animation: a1 1200ms ease-out infinite;
 }
 
-.circle:last-child {
+/*.circle:last-child {
   animation: a2 1200ms ease-out infinite;
 }
 
