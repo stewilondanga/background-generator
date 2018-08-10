@@ -344,9 +344,10 @@ button:hover, .button:hover {
 #contact h1 {
   font-family: helvetica;
   font-weight: normal;
+  font-size: 30px;
   text-align: center;
   color: #c0c0c0;
-  padding-top: 50px;
+  padding-top: 250px;
   padding-bottom: 10px;
   width: 375px;
   margin: 0 auto;
