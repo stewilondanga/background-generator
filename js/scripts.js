@@ -287,49 +287,49 @@ var navigate = (function() {
           //ctx.stroke();
 
           //setColour(obj.x,obj.y+2*cellSize/3);
-          /*                    setColour(Math.round((obj.c - 1) / maxCols * gridWidth + cellSize / 2), Math.round(obj.r / maxRows * gridHeight + 2 * cellSize / 3));
-                              filler();
-                              //ctx.fillStyle = "green";
-                              ctx.beginPath();
-                              ctx.moveTo(obj.x, obj.y);
-                              ctx.lineTo(points[i + maxCols - 1].x, points[i + maxCols - 1].y);
-                              ctx.lineTo(points[i + maxCols].x, points[i + maxCols].y);
-                              ctx.closePath();
-                              ctx.fill();
-                              //console.log("NO");
-                            }
-                          }
-                        }
-                        //Point generator
-                        function generatePoints(amount) {
-                          points = [];
-                          var temp;
-                          var row = 0;
-                          var col = 0;
-                          for (var i = 0; i < amount; i++) {
-                            temp = new point();
-                            if (row % 2 == 0) {
-                              temp.x = (col * cellSize) - cellSize;
-                              temp.x = temp.x + (Math.random() - .5) * variance * cellSize * 2;
-                            } else {
-                              temp.x = (col * cellSize) - cellSize - cellSize / 2;
-                              temp.x = temp.x + (Math.random() - .5) * variance * cellSize * 2;
-                            }
-                            temp.y = (row * cellSize * 0.866) - cellSize;
-                            temp.y = temp.y + (Math.random() - .5) * variance * cellSize * 2;
-                            temp.r = row;
-                            temp.c = col;
-                            points.push(temp);
-                            col = col + 1;
-                            if ((i + 1) % maxCols == 0) {
-                              row = row + 1;
-                              col = 0;
-                            }
-                          }
-                          //console.log(points);
-                        }
+          setColour(Math.round((obj.c - 1) / maxCols * gridWidth + cellSize / 2), Math.round(obj.r / maxRows * gridHeight + 2 * cellSize / 3));
+          filler();
+          //ctx.fillStyle = "green";
+          ctx.beginPath();
+          ctx.moveTo(obj.x, obj.y);
+          ctx.lineTo(points[i + maxCols - 1].x, points[i + maxCols - 1].y);
+          ctx.lineTo(points[i + maxCols].x, points[i + maxCols].y);
+          ctx.closePath();
+          ctx.fill();
+          //console.log("NO");
+        }
+      }
+    }
+    //Point generator
+    function generatePoints(amount) {
+      points = [];
+      var temp;
+      var row = 0;
+      var col = 0;
+      for (var i = 0; i < amount; i++) {
+        temp = new point();
+        if (row % 2 == 0) {
+          temp.x = (col * cellSize) - cellSize;
+          temp.x = temp.x + (Math.random() - .5) * variance * cellSize * 2;
+        } else {
+          temp.x = (col * cellSize) - cellSize - cellSize / 2;
+          temp.x = temp.x + (Math.random() - .5) * variance * cellSize * 2;
+        }
+        temp.y = (row * cellSize * 0.866) - cellSize;
+        temp.y = temp.y + (Math.random() - .5) * variance * cellSize * 2;
+        temp.r = row;
+        temp.c = col;
+        points.push(temp);
+        col = col + 1;
+        if ((i + 1) % maxCols == 0) {
+          row = row + 1;
+          col = 0;
+        }
+      }
+      //console.log(points);
+    }
 
-                        function addRand(a, b) {
+    /*                    function addRand(a, b) {
                           return (Math.random() * b * a - (b / 2))
                         }
 
