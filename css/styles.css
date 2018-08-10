@@ -288,7 +288,7 @@ button:hover, .button:hover {
   }
 }
 
-/*@keyframes a3 {
+@keyframes a3 {
   0% {
     transform: translateX(0);
   }
@@ -312,7 +312,7 @@ button:hover, .button:hover {
   }
 }
 
-@keyframes a4 {
+/*@keyframes a4 {
   0% {
     transform: translateX(0);
   }
