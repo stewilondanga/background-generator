@@ -144,6 +144,10 @@ ul, li {
   display: none;
 }
 
+.section {
+  padding: 1rem;
+}
+
 .controls {
   position: fixed;
   top: 40px;
@@ -215,10 +219,6 @@ button, .button {
 
 button:hover, .button:hover {
   background: linear-gradient(to bottom right, #e16b7b, #af3580);
-}
-
-.section {
-  padding: 1rem;
 }
 
 input[type=text], input[type=number], input[type=range], select {
