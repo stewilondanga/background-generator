@@ -217,7 +217,7 @@ button {
   border: none;
 }
 
-/*button, .button {
+button, .button {
   display: inline-block;
   text-decoration: none;
   background: linear-gradient(to bottom right, #D84155, #882963);
@@ -227,7 +227,7 @@ button {
   width: 100%;
 }
 
-button:hover, .button:hover {
+/*button:hover, .button:hover {
   background: linear-gradient(to bottom right, #e16b7b, #af3580);
 }
 
