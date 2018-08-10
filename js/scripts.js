@@ -92,9 +92,9 @@ var navigate = (function() {
       }
     }
 
-    /*    setCols();
+    setCols();
 
-        setSize(1280, 720);
+    /*    setSize(1280, 720);
         //base_image = new Image();
         //base_image.crossOrigin = "Anonymous";
         //base_image.src = 'download.png';
