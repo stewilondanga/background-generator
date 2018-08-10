@@ -165,6 +165,11 @@ ul, li {
   font-weight: 600;
 }
 
+.fieldgroup {
+  padding: 1rem;
+  background: #222;
+}
+
 /*button {
   outline: none;
   cursor: pointer;
@@ -178,7 +183,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
 
 .row {
   margin: 0 -0.5rem;
@@ -198,7 +202,6 @@ a:hover {
   padding: 0 0.5rem;
   width: 50%;
 }
-
 
 button, .button {
   display: inline-block;
@@ -230,11 +233,6 @@ input[type=text], input[type=number], select {
   background: #fff;
   border: none;
   margin-bottom: .75rem;
-}
-
-.fieldgroup {
-  padding: 1rem;
-  background: #222;
 }
 
 label {
