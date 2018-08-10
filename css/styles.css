@@ -134,7 +134,17 @@ ul, li {
   animation: a4 1200ms ease-out infinite;
 }
 
-/*button {
+.canvas1 {
+  max-width: 95%;
+  max-height: 95%;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*.canvas2 {
+  display: none;
+}
+
+button {
   outline: none;
   cursor: pointer;
   border: none;
@@ -168,15 +178,6 @@ a:hover {
   width: 50%;
 }
 
-.canvas1 {
-  max-width: 95%;
-  max-height: 95%;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-}
-
-.canvas2 {
-  display: none;
-}
 
 button, .button {
   display: inline-block;
