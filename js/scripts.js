@@ -94,62 +94,62 @@ var navigate = (function() {
 
     setCols();
 
-    /*    setSize(1280, 720);
-        //base_image = new Image();
-        //base_image.crossOrigin = "Anonymous";
-        //base_image.src = 'download.png';
-        //base_image.onload = function () {
-        drawBG(ctx2, cvs2);
-        loader = document.getElementById("loader");
+    setSize(1280, 720);
+    //base_image = new Image();
+    //base_image.crossOrigin = "Anonymous";
+    //base_image.src = 'download.png';
+    //base_image.onload = function () {
+    drawBG(ctx2, cvs2);
+    loader = document.getElementById("loader");
+    pointFun();
+    //}
+    var tout = 0;
+    numColours.addEventListener("change", function() {
+      document.getElementById("colour-div").innerHTML = "";
+      setCols();
+      drawBG(ctx2, cvs2);
+      loader.style.display = "";
+      var blob = window.setTimeout(function() {
         pointFun();
-        //}
-        var tout = 0;
-        numColours.addEventListener("change", function() {
-          document.getElementById("colour-div").innerHTML = "";
-          setCols();
-          drawBG(ctx2, cvs2);
-          loader.style.display = "";
-          var blob = window.setTimeout(function() {
-            pointFun();
-          }, tout);
-        }, false);
-        cRange.addEventListener("change", function() {
-          loader.style.display = "";
-          var blob = window.setTimeout(function() {
-            pointFun();
-          }, tout);
-        }, false);
-        vRange.addEventListener("change", function() {
-          loader.style.display = "";
-          var blob = window.setTimeout(function() {
-            pointFun();
-          }, tout);
-        }, false);
-        oAmount.addEventListener("change", function() {
-          loader.style.display = "";
-          var blob = window.setTimeout(function() {
-            pointFun(true);
-          }, tout);
-        }, false);
+      }, tout);
+    }, false);
+    cRange.addEventListener("change", function() {
+      loader.style.display = "";
+      var blob = window.setTimeout(function() {
+        pointFun();
+      }, tout);
+    }, false);
+    vRange.addEventListener("change", function() {
+      loader.style.display = "";
+      var blob = window.setTimeout(function() {
+        pointFun();
+      }, tout);
+    }, false);
+    oAmount.addEventListener("change", function() {
+      loader.style.display = "";
+      var blob = window.setTimeout(function() {
+        pointFun(true);
+      }, tout);
+    }, false);
 
-        var sizeBtn = document.getElementById('size-btn');
-        sizeBtn.addEventListener("click", function() {
-          var tempw = document.getElementById('width').value;
-          var temph = document.getElementById('height').value;
-          setSize(tempw, temph);
-          drawBG(ctx2, cvs2);
-          console.log(tempw + " : " + temph)
-          pointFun();
-        })
+    /*        var sizeBtn = document.getElementById('size-btn');
+            sizeBtn.addEventListener("click", function() {
+              var tempw = document.getElementById('width').value;
+              var temph = document.getElementById('height').value;
+              setSize(tempw, temph);
+              drawBG(ctx2, cvs2);
+              console.log(tempw + " : " + temph)
+              pointFun();
+            })
 
-        //saveBtn.addEventListener("click",saveImage,false);
-      }
-      //Particle constructor
-      function point() {
-        /*this.x = Math.random()*cvs.width;;
-        this.y = Math.random()*cvs.height;
-        this.vx = (Math.random()*2)-1;
-        this.vy = (Math.random()*2)-1;*/
+            //saveBtn.addEventListener("click",saveImage,false);
+          }
+          //Particle constructor
+          function point() {
+            /*this.x = Math.random()*cvs.width;;
+            this.y = Math.random()*cvs.height;
+            this.vx = (Math.random()*2)-1;
+            this.vy = (Math.random()*2)-1;*/
     //points.push(this);
   }
 
