@@ -9,147 +9,147 @@ var navigate = (function() {
 
 (function() {
 
-    /*  'use strict';
+    'use strict';
 
-      var cvs, //canvas
-        ctx, //canvas context
-        gridWidth, //draw width (2 cells wider than the actual canvas)
-        gridHeight, //draw height (2 cells taller than the actual canvas)
-        vRange,
-        cRange,
-        maxCols,
-        maxRows,
-        oAmount,
-        imgd, imge,
-        base_image,
-        saveBtn,
-        cvs2,
-        ctx2,
-        loader,
-        numColours,
-        preset;
-      var points = [];
-      var cellSize = 50; //size of a single grid square
-      var variance = 0.2;
-      var ovA = 0.5;
-      var colours = ["#22bbee", "#8855cc", "#ee2266", "#ee7722"];
+    /*var cvs, //canvas
+      ctx, //canvas context
+      gridWidth, //draw width (2 cells wider than the actual canvas)
+      gridHeight, //draw height (2 cells taller than the actual canvas)
+      vRange,
+      cRange,
+      maxCols,
+      maxRows,
+      oAmount,
+      imgd, imge,
+      base_image,
+      saveBtn,
+      cvs2,
+      ctx2,
+      loader,
+      numColours,
+      preset;
+    var points = [];
+    var cellSize = 50; //size of a single grid square
+    var variance = 0.2;
+    var ovA = 0.5;
+    var colours = ["#22bbee", "#8855cc", "#ee2266", "#ee7722"];
 
-      function init() {
-        //Add on load scripts
-        cvs = document.getElementById("canvas");
-        cRange = document.getElementById("cell-size");
-        vRange = document.getElementById("variance");
-        oAmount = document.getElementById("oamount");
-        saveBtn = document.getElementById('save');
-        ctx = cvs.getContext("2d");
-        cvs2 = document.getElementById("canvas2");
-        ctx2 = cvs2.getContext("2d");
-        numColours = document.getElementById("numColours");
+    function init() {
+      //Add on load scripts
+      cvs = document.getElementById("canvas");
+      cRange = document.getElementById("cell-size");
+      vRange = document.getElementById("variance");
+      oAmount = document.getElementById("oamount");
+      saveBtn = document.getElementById('save');
+      ctx = cvs.getContext("2d");
+      cvs2 = document.getElementById("canvas2");
+      ctx2 = cvs2.getContext("2d");
+      numColours = document.getElementById("numColours");
 
-        preset = document.getElementById("preset-size");
+      preset = document.getElementById("preset-size");
 
-        preset.addEventListener("change", function() {
-          var temp5 = preset.value.split("-");
-          console.log(temp5);
+      preset.addEventListener("change", function() {
+        var temp5 = preset.value.split("-");
+        console.log(temp5);
 
-          document.getElementById('width').value = parseInt(temp5[0]);
-          document.getElementById('height').value = parseInt(temp5[1]);
-        }, false);
+        document.getElementById('width').value = parseInt(temp5[0]);
+        document.getElementById('height').value = parseInt(temp5[1]);
+      }, false);
 
 
-        var setSize = function(w, h) {
-          cvs.width = w;
-          cvs.height = h;
+      var setSize = function(w, h) {
+        cvs.width = w;
+        cvs.height = h;
 
-          gridWidth = cvs.width + cellSize * 2;
-          gridHeight = cvs.height + cellSize * 2;
+        gridWidth = cvs.width + cellSize * 2;
+        gridHeight = cvs.height + cellSize * 2;
 
-          cvs2.width = cvs.width;
-          cvs2.height = cvs.height;
-          //Repopulate inputs
-          document.getElementById('width').value = w;
-          document.getElementById('height').value = h;
-        }
-
-        var setCols = function() {
-          for (var i = 0; i < numColours.value; i++) {
-            var temp = document.createElement("input");
-            temp.type = "color";
-            temp.id = "colour" + (i + 1);
-
-            document.getElementById("colour-div").appendChild(temp);
-            document.getElementById("num-colours").innerHTML = numColours.value;
-            temp.value = colours[i];
-            temp.addEventListener("change", function() {
-              //document.getElementById("colour-div").innerHTML = "";
-              //setCols();
-              drawBG(ctx2, cvs2);
-              loader.style.display = "";
-              var blob = window.setTimeout(function() {
-                pointFun();
-              }, 2);
-            }, false);
-          }
-        }
-
-        setCols();
-
-        setSize(1280, 720);
-        //base_image = new Image();
-        //base_image.crossOrigin = "Anonymous";
-        //base_image.src = 'download.png';
-        //base_image.onload = function () {
-        drawBG(ctx2, cvs2);
-        loader = document.getElementById("loader");
-        pointFun();
-        //}
-        var tout = 0;
-        numColours.addEventListener("change", function() {
-          document.getElementById("colour-div").innerHTML = "";
-          setCols();
-          drawBG(ctx2, cvs2);
-          loader.style.display = "";
-          var blob = window.setTimeout(function() {
-            pointFun();
-          }, tout);
-        }, false);
-        cRange.addEventListener("change", function() {
-          loader.style.display = "";
-          var blob = window.setTimeout(function() {
-            pointFun();
-          }, tout);
-        }, false);
-        vRange.addEventListener("change", function() {
-          loader.style.display = "";
-          var blob = window.setTimeout(function() {
-            pointFun();
-          }, tout);
-        }, false);
-        oAmount.addEventListener("change", function() {
-          loader.style.display = "";
-          var blob = window.setTimeout(function() {
-            pointFun(true);
-          }, tout);
-        }, false);
-
-        var sizeBtn = document.getElementById('size-btn');
-        sizeBtn.addEventListener("click", function() {
-          var tempw = document.getElementById('width').value;
-          var temph = document.getElementById('height').value;
-          setSize(tempw, temph);
-          drawBG(ctx2, cvs2);
-          console.log(tempw + " : " + temph)
-          pointFun();
-        })
-
-        //saveBtn.addEventListener("click",saveImage,false);
+        cvs2.width = cvs.width;
+        cvs2.height = cvs.height;
+        //Repopulate inputs
+        document.getElementById('width').value = w;
+        document.getElementById('height').value = h;
       }
-      //Particle constructor
-      function point() {
-        /*this.x = Math.random()*cvs.width;;
-        this.y = Math.random()*cvs.height;
-        this.vx = (Math.random()*2)-1;
-        this.vy = (Math.random()*2)-1;*/
+
+      var setCols = function() {
+        for (var i = 0; i < numColours.value; i++) {
+          var temp = document.createElement("input");
+          temp.type = "color";
+          temp.id = "colour" + (i + 1);
+
+          document.getElementById("colour-div").appendChild(temp);
+          document.getElementById("num-colours").innerHTML = numColours.value;
+          temp.value = colours[i];
+          temp.addEventListener("change", function() {
+            //document.getElementById("colour-div").innerHTML = "";
+            //setCols();
+            drawBG(ctx2, cvs2);
+            loader.style.display = "";
+            var blob = window.setTimeout(function() {
+              pointFun();
+            }, 2);
+          }, false);
+        }
+      }
+
+      setCols();
+
+      setSize(1280, 720);
+      //base_image = new Image();
+      //base_image.crossOrigin = "Anonymous";
+      //base_image.src = 'download.png';
+      //base_image.onload = function () {
+      drawBG(ctx2, cvs2);
+      loader = document.getElementById("loader");
+      pointFun();
+      //}
+      var tout = 0;
+      numColours.addEventListener("change", function() {
+        document.getElementById("colour-div").innerHTML = "";
+        setCols();
+        drawBG(ctx2, cvs2);
+        loader.style.display = "";
+        var blob = window.setTimeout(function() {
+          pointFun();
+        }, tout);
+      }, false);
+      cRange.addEventListener("change", function() {
+        loader.style.display = "";
+        var blob = window.setTimeout(function() {
+          pointFun();
+        }, tout);
+      }, false);
+      vRange.addEventListener("change", function() {
+        loader.style.display = "";
+        var blob = window.setTimeout(function() {
+          pointFun();
+        }, tout);
+      }, false);
+      oAmount.addEventListener("change", function() {
+        loader.style.display = "";
+        var blob = window.setTimeout(function() {
+          pointFun(true);
+        }, tout);
+      }, false);
+
+      var sizeBtn = document.getElementById('size-btn');
+      sizeBtn.addEventListener("click", function() {
+        var tempw = document.getElementById('width').value;
+        var temph = document.getElementById('height').value;
+        setSize(tempw, temph);
+        drawBG(ctx2, cvs2);
+        console.log(tempw + " : " + temph)
+        pointFun();
+      })
+
+      //saveBtn.addEventListener("click",saveImage,false);
+    }
+    //Particle constructor
+    function point() {
+      /*this.x = Math.random()*cvs.width;;
+      this.y = Math.random()*cvs.height;
+      this.vx = (Math.random()*2)-1;
+      this.vy = (Math.random()*2)-1;*/
     //points.push(this);
   }
 
