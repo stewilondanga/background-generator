@@ -5,21 +5,20 @@ html {
   font-size: 16px;
 }
 
-/*body {
-  text-align: center;
-  font-family: courier;
-  background-image: url("../assets/image.jpeg");
-  background-repeat: no-repeat;
-  background-size: 100%;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   padding: 0;
   margin: 0;
   font-size: 16px;
+  text-align: center;
+  font-family: courier;
 }
 
-ul, li {
+/*ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -35,10 +34,7 @@ button {
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
+
 
 /*.my_social {
   position: absolute;
