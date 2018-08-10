@@ -122,11 +122,11 @@ ul, li {
   animation: a1 1200ms ease-out infinite;
 }
 
-/*.circle:last-child {
+.circle:last-child {
   animation: a2 1200ms ease-out infinite;
 }
 
-.circle:nth-child(2) {
+/*.circle:nth-child(2) {
   animation: a3 1200ms ease-out infinite;
 }
 
