@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <title> </title>
+</head>
+
+<body>
+
+  <div class="my_social">
+      <a href="https://www.linkedin.com/in/stewart-ilondanga-336b2743/" class="social">
+          <img src="https://i.imgsafe.org/85/857cb1a42e.png" alt="linkedin"></img>
+        </a>
+      <a href="https://stewilondanga.github.io/" class="social">
+          <img src="https://i.imgsafe.org/8d/8d745a5c82.png" alt="github"></img>
+        </a>
+      <a href="https://twitter.com/stew_ilondanga" class="social">
+          <img src="https://i.imgsafe.org/43/431dd07874.png" alt="twitter"></img>
+        </a>
+    </div>
+
+    <!-- Topbar -->
+    <header class="topbar">
+    	<ul>
+    		<li><h1>Low Poly Background</h1></li>
+        <li><a href="https://cojdev.github.io/lowpoly" target="_top">Full Version</a></li>
+    		<li><a class="github-button" href="https://github.com/cojdev/lowpoly" data-icon="octicon-star" data-show-count="true" aria-label="Star cojdev/lowpoly on GitHub">Star</a></li>
+    	</ul>
+    </header>
+    <!-- Canvas Display -->
+    <section class="display">
+    	<div class="wrap">
+    		<div id="loader" class="loader">
+    			<div class="circle"></div>
+    			<div class="circle"></div>
+    			<div class="circle"></div>
+    			<div class="circle"></div>
+    		</div>
+    	<canvas id="canvas" class="canvas1"></canvas>
+    	</div>
+    	<canvas id="canvas2" class="canvas2"></canvas>
+      <div class="footer">
+        Developed by <a href="https://cojdev.github.io" target="_top">Charles Ojukwu</a>
+      </div>
+    </section>
+    <!-- Controls -->
+    <section class="controls">
+
+    	<h3>Dimensions</h3>
+    	<div class="fieldgroup">
+    		<label for="preset-size">Presets</label>
+    		<select id="preset-size">
+    			<option value="1280-720">1280x720</option>
+    			<option value="1366-768">1366x768</option>
+    			<option value="1920-1080">1920x1080</option>
+    			<option value="3840-2160">3840x2160 (4K)</option>
+    			<option value="640-1152">iPhone 5/5s</option>
+    			<option value="750-1334">iPhone 6/7/8</option>
+    			<option value="1080-1920">iPhone 6+/7+/8+</option>
+    		</select>
+    		<div class="row">
+    			<div class="_50">
+    				<label for="width">Width</label>
+    				<input type="number" id="width">
+    			</div>
+    			<div class="_50">
+    				<label for="height">Height</label>
+    				<input type="number" id="height">
+    			</div>
+    		</div>
+    		<button id="size-btn">Set</button>
+    	</div>
+
+    	<h3>Geometry</h3>
+    	<div class="fieldgroup">
+    		<label for="variance">Variance</label>
+    		<input type="range" id="variance" value="40">
+
+    		<label for="cell-size">Cell Size</label>
+    		<input type="range" id="cell-size" value="40">
+
+    		<label for="oamount">Depth</label>
+    		<input type="range" id="oamount" value="10">
+    	</div>
+
+
+    	<h3>Colour</h3>
+    	<div class="fieldgroup">
+    		<label for="numColours">No. of colours: <span id="num-colours"></span></label>
+    		<input type="range" id="numColours" value="2" max="4" min="1" step="1"><br>
+    		<!-- Container for dynamically generated color input elememets -->
+    		<div id="colour-div"></div>
+    	</div>
+    	<div class="section">
+    		<a id="save" class="button" download="lowpoly.png">Download Image</a>
+    	</div>
+
+    </section>
+    <!-- Loader -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    	<defs>
+    	<filter id="goo">
+    		<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+    		<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+    		<feBlend in="SourceGraphic" in2="goo" />
+    	</filter>
+    	</defs>
+    </svg>
+
+  <section id="contact">
+    <div class="overlay">
+      <div class="containers">
+
+        <h1>Created by Stewart ilondanga
+<script>
+with(new Date)c=-new Date(y=getFullYear(),m=getMonth()).getDay(x=new Date(y,++m,0).getDate(b=-1))
+h='<table class="cal"><caption> Copyright '+' '+y+'/'+m+'<tr>'+'SuMoTuWeThFrSa'.replace(/(..)/g,'<th>$1')
+while((b++>5?b=0:b)|c<x)h+=(b?'':'<tr>')+'<td>'+(++c<1|c>x?'-':c);document.write(h+'</table>')
+</script>
+</h1>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/scripts.js" charset="utf-8"></script>
+
+</html>
