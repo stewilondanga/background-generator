@@ -183,6 +183,12 @@ ul, li {
   clear: both;
 }
 
+._50 {
+  float: left;
+  padding: 0 0.5rem;
+  width: 50%;
+}
+
 /*button {
   outline: none;
   cursor: pointer;
@@ -195,12 +201,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-._50 {
-  float: left;
-  padding: 0 0.5rem;
-  width: 50%;
 }
 
 button, .button {
