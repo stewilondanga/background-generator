@@ -240,7 +240,7 @@ button:hover, .button:hover {
   text-align: center;
 }
 
-/*@keyframes a1 {
+@keyframes a1 {
   0% {
     transform: translateX(0);
   }
@@ -264,7 +264,7 @@ button:hover, .button:hover {
   }
 }
 
-@keyframes a2 {
+/*@keyframes a2 {
   0% {
     transform: translateX(0);
   }
