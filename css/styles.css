@@ -100,8 +100,6 @@ ul, li {
   top: 50%;
 }
 
-/*
-
 .loader {
   position: absolute;
   filter: url("#goo");
@@ -110,6 +108,8 @@ ul, li {
   height: 30px;
   width: 90px;
 }
+
+/*
 
 button {
   outline: none;
