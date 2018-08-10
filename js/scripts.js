@@ -329,36 +329,36 @@ var navigate = (function() {
       //console.log(points);
     }
 
-    /*                    function addRand(a, b) {
-                          return (Math.random() * b * a - (b / 2))
-                        }
+    function addRand(a, b) {
+      return (Math.random() * b * a - (b / 2))
+    }
 
-                        function pointFun(drawOnly) {
-                          if (drawOnly === true) {
-                            //do nothing
-                          } else {
-                            cellSize = (cRange.value * 3) + 30;
-                            variance = vRange.value / 100;
-                            gridWidth = cvs.width + cellSize * 2;
-                            gridHeight = cvs.height + cellSize * 2;
-                            maxCols = Math.ceil(gridWidth / cellSize) + 2;
-                            maxRows = Math.ceil(gridHeight / (cellSize * 0.865))
-                            //console.log(maxCols);
-                            var x = maxCols;
-                            var y = maxRows;
-                            generatePoints(x * y);
+    /*                      function pointFun(drawOnly) {
+                            if (drawOnly === true) {
+                              //do nothing
+                            } else {
+                              cellSize = (cRange.value * 3) + 30;
+                              variance = vRange.value / 100;
+                              gridWidth = cvs.width + cellSize * 2;
+                              gridHeight = cvs.height + cellSize * 2;
+                              maxCols = Math.ceil(gridWidth / cellSize) + 2;
+                              maxRows = Math.ceil(gridHeight / (cellSize * 0.865))
+                              //console.log(maxCols);
+                              var x = maxCols;
+                              var y = maxRows;
+                              generatePoints(x * y);
+                            }
+                            ovA = oAmount.value / 100;
+                            ctx.clearRect(0, 0, cvs.width, cvs.height);
+                            drawBG(ctx, cvs);
+                            for (var i = 0; i < points.length; i++) {
+                              draw(points[i], true);
+                            };
+                            saveImage();
+                            loader.style.display = "none";
                           }
-                          ovA = oAmount.value / 100;
-                          ctx.clearRect(0, 0, cvs.width, cvs.height);
-                          drawBG(ctx, cvs);
-                          for (var i = 0; i < points.length; i++) {
-                            draw(points[i], true);
-                          };
-                          saveImage();
-                          loader.style.display = "none";
-                        }
 
-                        //Execute when DOM has loaded
-                        document.addEventListener('DOMContentLoaded', init, false);
+                          //Execute when DOM has loaded
+                          document.addEventListener('DOMContentLoaded', init, false);
 
-                      })();
+                        })();
